@@ -1,5 +1,23 @@
 @import "base.scss";
 
+$transform-time: 4s !default;
+
+@mixin rotate-transition {
+  -ms-transition: transform $transform-time ease;
+  -moz-transition: transform $transform-time ease;
+  -webkit-transition: -webkit-transform $transform-time ease;
+  -o-transition: -o-transform $transform-time ease;
+  transition: transform $transform-time ease;
+}
+
+@mixin rotate-transform ($angle) {
+  -ms-transform: rotate($angle);   /* IE 9 */
+  -moz-transform: rotate($angle);  /* Firefox */
+  -webkit-transform: rotate($angle); /* Safari 和 Chrome */
+  -o-transform: rotate($angle);  /* Opera */
+  transform: rotate($angle);
+}
+
 body { 
   background: #ffbb00; 
 }
@@ -21,7 +39,7 @@ body {
 }
 .rotate-con-pan { 
   background: url(../images/disk.jpg) no-repeat 0 0;
-  background-size: 100% 100%;
+  background-size: contain;
   position: relative;
   margin: 0 auto;
   width: 480px; 
@@ -31,7 +49,7 @@ body {
   -webkit-box-sizing: border-box;
   .rotate-con-zhen {
     background: url(../images/start.png) no-repeat 0 0;
-    background-size: 100% 100%;
+    background-size: contain;
     position: absolute;
     left: 180px;
     top: 140px;
@@ -40,134 +58,55 @@ body {
     cursor: pointer;
   }
   .rotate-con-zhen-rotate {
-    //-webkit-animation-name:'rotate';/*动画属性名，也就是我们前面keyframes定义的动画名*/
-    //-webkit-animation-duration: 4s;/*动画持续时间*/
-    //-webkit-animation-timing-function: ease; /*动画频率，和transition-timing-function是一样的*/
-    //-webkit-animation-delay: 0s;/*动画延迟时间*/
-    //-webkit-animation-iteration-count: 1;/*定义循环资料，infinite为无限次*/
-    //-webkit-animation-direction: normal;/*定义动画方式*/
-    -ms-transition: transform 4s ease;
-    -moz-transition: transform 4s ease;
-    -webkit-transition: -webkit-transform 4s ease;
-    -o-transition: -o-transform 4s ease;
-    transition: transform 4s ease;
-    -ms-transform: rotate(1440deg);   /* IE 9 */
-    -moz-transform: rotate(1440deg);  /* Firefox */
-    -webkit-transform: rotate(1440deg); /* Safari 和 Chrome */
-    -o-transform: rotate(1440deg);  /* Opera */
-    transform: rotate(1440deg);
+    @include rotate-transition;
+    @include rotate-transform(1440deg);
   }
   .rotate1800 {
-    -ms-transform: rotate(1800deg);   /* IE 9 */
-    -moz-transform: rotate(1800deg);  /* Firefox */
-    -webkit-transform: rotate(1800deg); /* Safari 和 Chrome */
-    -o-transform: rotate(1800deg);  /* Opera */
-    transform: rotate(1800deg);
+    @include rotate-transform(1800deg);
   }
 
   .rotate1470 {
-    -ms-transform: rotate(1470deg);   /* IE 9 */
-    -moz-transform: rotate(1470deg);  /* Firefox */
-    -webkit-transform: rotate(1470deg); /* Safari 和 Chrome */
-    -o-transform: rotate(1470deg);  /* Opera */
-    transform: rotate(1470deg);
+    @include rotate-transform(1470deg);
   }
 
   .rotate1497 {
-    -ms-transform: rotate(1497deg);   /* IE 9 */
-    -moz-transform: rotate(1497deg);  /* Firefox */
-    -webkit-transform: rotate(1497deg); /* Safari 和 Chrome */
-    -o-transform: rotate(1497deg);  /* Opera */
-    transform: rotate(1497deg);
+    @include rotate-transform(1497deg);
   }
 
   .rotate1526 {
-    -ms-transform: rotate(1526deg);   /* IE 9 */
-    -moz-transform: rotate(1526deg);  /* Firefox */
-    -webkit-transform: rotate(1526deg); /* Safari 和 Chrome */
-    -o-transform: rotate(1526deg);  /* Opera */
-    transform: rotate(1526deg);
+    @include rotate-transform(1526deg);
+  
   }
 
   .rotate1556 {
-    -ms-transform: rotate(1556deg);   /* IE 9 */
-    -moz-transform: rotate(1556deg);  /* Firefox */
-    -webkit-transform: rotate(1556deg); /* Safari 和 Chrome */
-    -o-transform: rotate(1556deg);  /* Opera */
-    transform: rotate(1556deg);
+    @include rotate-transform(1556deg);
   }
 
   .rotate1585 {
-    -ms-transform: rotate(1585deg);   /* IE 9 */
-    -moz-transform: rotate(1585deg);  /* Firefox */
-    -webkit-transform: rotate(1585deg); /* Safari 和 Chrome */
-    -o-transform: rotate(1585deg);  /* Opera */
-    transform: rotate(1585deg);
+    @include rotate-transform(1585deg);
   }
 
   .rotate1618 {
-    -ms-transform: rotate(1618deg);   /* IE 9 */
-    -moz-transform: rotate(1618deg);  /* Firefox */
-    -webkit-transform: rotate(1618deg); /* Safari 和 Chrome */
-    -o-transform: rotate(1618deg);  /* Opera */
-    transform: rotate(1618deg);
+    @include rotate-transform(1618deg);
   }
 
   .rotate1650 {
-    -ms-transform: rotate(1650deg);   /* IE 9 */
-    -moz-transform: rotate(1650deg);  /* Firefox */
-    -webkit-transform: rotate(1650deg); /* Safari 和 Chrome */
-    -o-transform: rotate(1650deg);  /* Opera */
-    transform: rotate(1650deg);
+    @include rotate-transform(1650deg);
   }
 
   .rotate1682 {
-    -ms-transform: rotate(1682deg);   /* IE 9 */
-    -moz-transform: rotate(1682deg);  /* Firefox */
-    -webkit-transform: rotate(1682deg); /* Safari 和 Chrome */
-    -o-transform: rotate(1682deg);  /* Opera */
-    transform: rotate(1682deg);
+    @include rotate-transform(1682deg);
   }
 
   .rotate1712 {
-    -ms-transform: rotate(1712deg);   /* IE 9 */
-    -moz-transform: rotate(1712deg);  /* Firefox */
-    -webkit-transform: rotate(1712deg); /* Safari 和 Chrome */
-    -o-transform: rotate(1712deg);  /* Opera */
-    transform: rotate(1712deg);
+    @include rotate-transform(1712deg);
   }
 
   .rotate1742 {
-    -ms-transform: rotate(1742deg);   /* IE 9 */
-    -moz-transform: rotate(1742deg);  /* Firefox */
-    -webkit-transform: rotate(1742deg); /* Safari 和 Chrome */
-    -o-transform: rotate(1742deg);  /* Opera */
-    transform: rotate(1742deg);
+    @include rotate-transform(1742deg);
   }
 
   .rotate1772 {
-    -ms-transform: rotate(1772deg);   /* IE 9 */
-    -moz-transform: rotate(1772deg);  /* Firefox */
-    -webkit-transform: rotate(1772deg); /* Safari 和 Chrome */
-    -o-transform: rotate(1772deg);  /* Opera */
-    transform: rotate(1772deg);
-  }
-}
-
-
-@-webkit-keyframes 'rotate' {
-  0% {
-    -ms-transform: rotate(0deg);   /* IE 9 */
-    -moz-transform: rotate(0deg);  /* Firefox */
-    -webkit-transform: rotate(0deg); /* Safari 和 Chrome */
-    -o-transform: rotate(0deg);  /* Opera */
-    transform: rotate(0deg);
-  }
-  100% {
-    -ms-transform: rotate(1440deg);   /* IE 9 */
-    -moz-transform: rotate(1440deg);  /* Firefox */
-    -webkit-transform: rotate(1440deg); /* Safari 和 Chrome */
-    -o-transform: rotate(1440deg);  /* Opera */
-    transform: rotate(1440deg);
+    @include rotate-transform(1772deg);
   }
 }
